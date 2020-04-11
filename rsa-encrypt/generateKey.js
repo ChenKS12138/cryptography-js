@@ -11,7 +11,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const generateMinPrimeFactor = (num) => {
+const generateE = (num) => {
   if (num < 2) return null;
   let current = 2;
   while (current <= num && num % current === 0) {
@@ -47,7 +47,7 @@ function generateKey() {
   const q = generateBigPrime();
   const n = p * q;
   const m = (p - 1) * (q - 1);
-  const e = generateMinPrimeFactor(m);
+  const e = generateE(m);
   const d = generateD(e, m);
 
   return {
